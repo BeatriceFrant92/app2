@@ -1,0 +1,33 @@
+<div class="container">
+<h3 class="title1 center margtop60">Nos voitures</h3>
+
+<a routerLink="/addVoiture" class="waves-effect waves-light btn-small margbot30"><i class="medium material-icons left">drive_eta</i>Ajouter</a>
+
+<br>
+
+<table class="highlight striped margtop30">
+    <thead class="black white-text">
+        <tr>
+            <th>Id</th> <th>Marque</th> <th>Modèle</th> <th>Pays</th> <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Boucle *ngfor pour parcourir le tableau voitures à l'affichage ensuite -->
+        <tr *ngFor="let voiture of voitures | async">
+            <td>{{ voiture.id }}</td>
+            <td>{{ voiture.marque }}</td>
+            <td>{{ voiture.modele }}</td>
+            <td>{{ voiture.pays }}</td>
+            <td>
+                <a (click)="removeVoiture(voiture.id)" class="waves-effect waves-effect waves-light bt btn red">
+                <i class="material-icons">delete</i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p class="margbot60"></p>
+
+
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <h3 class="title1 center margtop60">Ajouter des voitures</h3>
+<!-- Affichage de la liste des voitures -->
+<div class="container">
+  <div>
+    <form class="col s12" [formGroup]="form" (ngSubmit)="addVoiture()">
+      <div>
+        <div class="input-field">
+          <input placeholder="marque" id="marque" type="text" formControlName="marque" class="validate">
+          <label for="marque">Marque</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="modele" id="modele" type="text" formControlName="modele" class="validate">
+          <label for="modele">Modèle</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="pays" id="pays" type="text" formControlName="pays" class="validate">
+          <label for="pays">Pays</label>
+        </div>
+        <br>
+        <button type="submit" [disabled]="form.invalid" class="waves-effect waves-light btn-large">Enregistrer<i class="material-icons right"></i></button>
+      </div>
+    </form>
+    
+  </div>
+   </div><!--Fin div container -->
+   
+
+
+</div>
